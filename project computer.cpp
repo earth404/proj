@@ -11,7 +11,7 @@ int main() {
 
     double grade, x = 1.0, y;
     char grade_str[3];
-    printf("Enter grade (or -1 to end): ");
+    printf("Enter score (or -1 to end): ");
     scanf("%lf", &grade);
     double grade_y_prev = 0.00;
     while (grade != -1) {
@@ -33,7 +33,7 @@ int main() {
         }
 
         fprintf(gp, "set object %lf circle at %lf,%lf fillcolor \"black\" size 0.01\n", x, x, grade);
-        fprintf(gp, "set label \"%s\" at %lf,%lf center font \"Arial,7\"\n", grade_str, x, grade+0.02);
+        fprintf(gp, "set label \"%s\" at %lf,%lf center font \"Arial,10\"\n", grade_str, x, grade+0.02);
 
         double grade_x = x;
         double grade_y = y;
@@ -47,8 +47,8 @@ int main() {
 
     fprintf(gp, "set xrange [0:%lf]\n", x);
     fprintf(gp, "set yrange [0:100]\n");
-    fprintf(gp, "set xlabel \"Grade\"\n");
-    fprintf(gp, "set ylabel \"Grade Point\"\n");
+    fprintf(gp, "set xlabel \"JUMNUAN NUMBER\"\n");
+    fprintf(gp, "set ylabel \"score Point\"\n");
     fprintf(gp, "set title \"Grade Distribution\"\n");
     fprintf(gp, "plot NaN notitle\n");
 
